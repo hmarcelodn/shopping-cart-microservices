@@ -6,6 +6,6 @@ namespace ShoppingCarts.Microservice.Interfaces
 {
     public interface IProductCatalogClient
     {
-        Task<IList<ShoppingCartItem>> GetShoppingCartItems(int[] productCatalogIds);
+        Task<IEnumerable<ShoppingCartItem>> GetShoppingCartItems(int[] productCatalogIds);
     }
 }

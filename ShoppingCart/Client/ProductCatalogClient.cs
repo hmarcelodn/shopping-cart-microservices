@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Polly;
 
 namespace ShoppingCarts.Microservice.Client
 {
@@ -14,6 +15,13 @@ namespace ShoppingCarts.Microservice.Client
         // Note: Apiary Mock Data API
         private static string productCatalogBaseUrl = @"https://private-b3bb4-productcatalogmicroservice3.apiary-mock.com";
         private static string getProductPathTemplate = @"/products?productIds=[{0}]";
+
+        // Note: Polly Library Policy for Resiliency and Robustness
+        private static Policy exponentialRetryPolicy =
+            Policy.Handle<Exception>()
+                  .WaitAndRetryAsync(
+                    3,
+                    attempt => TimeSpan.FromMilliseconds(100 * Math.Pow(2, attempt)));
 
         private static async Task<HttpResponseMessage> RequestProductFromProductCatalog(int[] productCatalogIds)
         {
@@ -61,9 +69,12 @@ namespace ShoppingCarts.Microservice.Client
             public double Price { get; set; }
         }
 
-        public Task<IList<ShoppingCartItem>> GetShoppingCartItems(int[] productCatalogIds)
+        public async Task<IEnumerable<ShoppingCartItem>> GetShoppingCartItems(int[] productCatalogIds)
         {
-            throw new NotImplementedException();
+            // Note: Calling Product Catalog Microservice with Retry Policy
+            return await exponentialRetryPolicy.Execute(
+                async () => await GetItemsFromCatalogService(productCatalogIds).ConfigureAwait(false)
+            );
         }
     }
 }

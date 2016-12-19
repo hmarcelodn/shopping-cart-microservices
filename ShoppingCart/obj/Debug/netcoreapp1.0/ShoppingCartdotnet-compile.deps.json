@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0/",
-    "signature": "34383800ad3dbdca96e78982d378135a97a5c6b5"
+    "signature": "b3a4092d8c77205ff59ac8d57441aba0a38fed67"
   },
   "compilationOptions": {
     "defines": [
@@ -22,7 +22,8 @@
           "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Nancy": "2.0.0-barneyrubble",
-          "Microsoft.AspNetCore.Owin": "1.1.0"
+          "Microsoft.AspNetCore.Owin": "1.1.0",
+          "Polly": "5.0.2-v5-0-alpha0001"
         },
         "compile": {
           "ShoppingCart.dll": {}
@@ -733,6 +734,14 @@
         },
         "compile": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Polly/5.0.2-v5-0-alpha0001": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/Polly.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -2179,7 +2188,8 @@
           "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Nancy": "2.0.0-barneyrubble",
-          "Microsoft.AspNetCore.Owin": "1.1.0"
+          "Microsoft.AspNetCore.Owin": "1.1.0",
+          "Polly": "5.0.2-v5-0-alpha0001"
         },
         "runtime": {
           "ShoppingCart.dll": {}
@@ -2884,6 +2894,14 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Polly/5.0.2-v5-0-alpha0001": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Polly.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -4472,6 +4490,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw=="
+    },
+    "Polly/5.0.2-v5-0-alpha0001": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DNAVUDvpu8+UFxOF5KPwoGRfdmEkpjUvnpAIfMnUMmaqRP328IZe7/l7R0eBYLZhPghzaNYOjZ67iWqewENTlA=="
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
