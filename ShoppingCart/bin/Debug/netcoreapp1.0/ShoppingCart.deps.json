@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "6bbbb1efc95289f72de3f972c666a026574c3aa8"
+    "signature": "054b1a7e31b09e79dc2dace1c05568add2ef3369"
   },
   "compilationOptions": {
     "defines": [
@@ -22,7 +22,8 @@
           "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Nancy": "2.0.0-barneyrubble",
-          "Microsoft.AspNetCore.Owin": "1.1.0"
+          "Microsoft.AspNetCore.Owin": "1.1.0",
+          "Polly": "5.0.2-v5-0-alpha0001"
         },
         "runtime": {
           "ShoppingCart.dll": {}
@@ -657,6 +658,17 @@
         },
         "compile": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Polly/5.0.2-v5-0-alpha0001": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Polly.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/Polly.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -2807,6 +2819,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw=="
+    },
+    "Polly/5.0.2-v5-0-alpha0001": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DNAVUDvpu8+UFxOF5KPwoGRfdmEkpjUvnpAIfMnUMmaqRP328IZe7/l7R0eBYLZhPghzaNYOjZ67iWqewENTlA=="
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
