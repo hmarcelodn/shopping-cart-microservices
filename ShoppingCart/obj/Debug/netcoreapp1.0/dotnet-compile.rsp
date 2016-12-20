@@ -136,10 +136,13 @@
 --reference:C:\Users\hdelnegro\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\hdelnegro\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
 --resource:"C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\obj\Debug\netcoreapp1.0\ShoppingCartdotnet-compile.deps.json",ShoppingCart.deps.json
+C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\EventsFeedModule.cs
 C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\Program.cs
 C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\ShopingCartModule.cs
 C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\Startup.cs
 C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\Client\ProductCatalogClient.cs
+C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\Data\ShoppingCartStore.cs
+C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\Event\EventStore.cs
 C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\Interfaces\IEventStore.cs
 C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\Interfaces\IProductCatalogClient.cs
 C:\Users\hdelnegro\Documents\Belatrix\Bristlecone\Code\Shopping.Solution\ShoppingCart\Interfaces\IShoppingCartStore.cs

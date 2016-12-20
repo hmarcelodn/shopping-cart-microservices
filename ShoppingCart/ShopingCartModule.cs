@@ -12,6 +12,7 @@ namespace ShoppingCarts.Microservice
             IProductCatalogClient productCatalog,
             IEventStore eventStore) 
             : base("/shoppingcart")
+
         {
             Get("/{userid:int}", parameters =>
             {

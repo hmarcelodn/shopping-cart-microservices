@@ -23,13 +23,14 @@ namespace ShoppingCarts.Microservice.Client
                     3,
                     attempt => TimeSpan.FromMilliseconds(100 * Math.Pow(2, attempt)));
 
+        // Note: Invoke Api
         private static async Task<HttpResponseMessage> RequestProductFromProductCatalog(int[] productCatalogIds)
         {
             var productsResource = string.Format(getProductPathTemplate, string.Join(",", productCatalogIds));
 
             using (var httpClient = new HttpClient())
             {
-                httpClient.BaseAddress = new Uri(productsResource);
+                httpClient.BaseAddress = new Uri(productCatalogBaseUrl);
 
                 return await 
                     httpClient
@@ -66,13 +67,13 @@ namespace ShoppingCarts.Microservice.Client
             public string ProductId { get; set; }
             public string ProductName { get; set; }
             public string ProductDescription { get; set; }
-            public double Price { get; set; }
+            public Money Price { get; set; }
         }
 
         public async Task<IEnumerable<ShoppingCartItem>> GetShoppingCartItems(int[] productCatalogIds)
         {
             // Note: Calling Product Catalog Microservice with Retry Policy
-            return await exponentialRetryPolicy.Execute(
+            return await exponentialRetryPolicy.ExecuteAsync(
                 async () => await GetItemsFromCatalogService(productCatalogIds).ConfigureAwait(false)
             );
         }

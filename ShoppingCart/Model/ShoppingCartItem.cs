@@ -2,17 +2,17 @@
 {
     public class ShoppingCartItem
     {
-        private double price;
-        private string productDescription;
-        private string productName;
-        private int productId;
+        public Money Price { get; private set; }
+        public string ProductDescription { get; private set; }
+        public string ProductName { get; private set; }
+        public int ProductId { get; private set; }
 
-        public ShoppingCartItem(int productId, string productName, string productDescription, double price)
+        public ShoppingCartItem(int productId, string productName, string productDescription, Money price)
         {
-            this.productId = productId;
-            this.productName = productName;
-            this.productDescription = productDescription;
-            this.price = price;
+            this.ProductId = productId;
+            this.ProductName = productName;
+            this.ProductDescription = productDescription;
+            this.Price = price;
         }
     }
 }
