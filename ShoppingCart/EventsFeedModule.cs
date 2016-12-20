@@ -11,7 +11,19 @@ namespace ShoppingCarts.Microservice
             // Note: Events Endpoint
             Get("/", _ =>
             {
-                return null;
+                long firstEventSequenceNumber, lastEventSequenceNumber;
+
+                if (!long.TryParse(this.Request.Query.start.Value, out firstEventSequenceNumber))
+                {
+                    firstEventSequenceNumber = 0;
+                }
+
+                if (!long.TryParse(this.Request.Query.end.Value, out lastEventSequenceNumber))
+                {
+                    lastEventSequenceNumber = long.MaxValue;
+                }
+
+                return eventStore.GetEvents(firstEventSequenceNumber, lastEventSequenceNumber);
             });
         }
     }
