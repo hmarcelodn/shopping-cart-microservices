@@ -11,6 +11,14 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Recommendations.Microservic
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ShopperTracking.Microservice", "ShopperTracking.Microservice\ShopperTracking.Microservice.xproj", "{66160BAA-3E82-4F86-9655-780321ED911C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shopping Cart Microservice", "Shopping Cart Microservice", "{3C37228F-C728-4C93-91A5-04F25414D14D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Products Catalog Microservice", "Products Catalog Microservice", "{9AF07957-4792-42A6-BC52-1834C6899140}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recommendations Microservice", "Recommendations Microservice", "{CE30E2C4-3E2B-468E-8A1E-1C9AA2F935F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shopper Tracking Microservice", "Shopper Tracking Microservice", "{0BEA8374-7E7C-49D3-9658-65FBD43E7446}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +44,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F1EA84C-4F93-4668-BC82-EF1D49EF2116} = {3C37228F-C728-4C93-91A5-04F25414D14D}
+		{F247D465-BDE6-47B0-BD0D-4192A11B6E20} = {9AF07957-4792-42A6-BC52-1834C6899140}
+		{08931A3A-83E9-497E-9222-AD3A7C604D0C} = {CE30E2C4-3E2B-468E-8A1E-1C9AA2F935F9}
+		{66160BAA-3E82-4F86-9655-780321ED911C} = {0BEA8374-7E7C-49D3-9658-65FBD43E7446}
 	EndGlobalSection
 EndGlobal
